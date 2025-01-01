@@ -196,3 +196,6 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home/
 export PATH=/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home/bin/java:$PATH
 
 alias gam="/Users/kris/bin/gam7/gam"
+
+alias nzsh="nvim ~/.zshrc"
+alias ntmcnf="nvim ~/Dotfiles/.tmux.conf"
