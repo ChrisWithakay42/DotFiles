@@ -1,0 +1,88 @@
+"" Source your .vimrc
+
+" source ~/.config/nvim/init.vim
+
+nnoremap \e :e ~/.ideavimrc<CR>
+nnoremap \r :action IdeaVim.ReloadVimRc.reload<CR>
+nnoremap \E :e ~/.config/nvim/init.vim
+
+"" Plugins ---------------------------
+set surround
+set multiple-cursors
+set NERDTree
+
+set clipboard+=unnamed,ideaput
+set ideajoin
+set idearefactormode=keep
+set showmode
+set showcmd
+
+" system clipboard ---------------------
+vmap <leader>y "+y
+vmap <leader>d "+d
+vmap <leader>p "+p
+vmap <leader>P "+P
+nmap <leader>Y "+yy
+nmap <leader>p "+p
+nmap <leader>P "+P
+
+nnoremap L $
+nnoremap H ^
+vnoremap L $
+vnoremap H ^
+
+" Remap shortcut to navigate between split layouts easily --------------------
+nnoremap <C-J> <C-W><C-j>
+nnoremap <C-K> <C-W><C-k>
+nnoremap <C-L> <C-W><C-l>
+nnoremap <C-H> <C-W><C-h>
+
+" ---- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+
+" Display squiggly line errors
+nnoremap <leader>e :action ShowErrorDescription<CR>
+" Navigation
+nnoremap [[ :action MethodUp<CR>
+nnoremap ]] :action MethodDown<CR>
+nnoremap gi :action GotoImplementation<CR>
+nnoremap gp :action GotoSuperMethod<CR>
+nnoremap gt :action GotoTest<CR>
+nnoremap gb :action Back<CR>
+nnoremap gf :action Forward<CR>
+nnoremap tn :action NextTab<CR>
+nnoremap tp :action PreviousTab<CR>
+" Find more examples here: https://jb.gg/share-ideavimrc
+
+" Edit ---
+nnoremap <leader>r :action ReformatCode<CR>
+nnoremap <leader>wr :action SurroundWith<CR>
+nnoremap <leader>-i :action OptimizeImports<CR>
+nnoremap <leader>n :action RenameElement<CR>
+nnoremap <leader>t :action RefactoringMenu<CR>
+
+" Tests & Debug
+nnoremap ,c :action ChooseRunConfiguration<CR>
+nnoremap ,r :action ContextRun<CR>
+nnoremap ,u :action Rerun<CR>
+nnoremap ,f :action RerunFailedTests<CR>
+nnoremap ,b :action ToggleLineBreakpoint<CR>
+nnoremap ,d :action ContextDebug<CR>
+
+" Actions"
+nnoremap <c-z> :action ToggleDistractionFreeMode<CR>
+nnoremap <C-S-F> :action FindInPath<CR>
+nnoremap <C-a> :action GotoAction<CR>
+nnoremap <C-f> :action GotoFile<CR>
+nnoremap <C-c> :action GotoClass<CR>
+nnoremap <C-p> :action PinActiveEditorTab<CR>
+nnoremap <C-m> :action MoveEditorToOppositeTabGroup<CR>
+nnoremap <C-\> :action SplitVertically<CR>
+" Toggle Tool Windows
+nnoremap <C-S-T> :action ActivateTerminalToolWindow<CR>
+nnoremap <C-S-D> :action ActivateDatabaseToolWindow<CR>
+
+" Git ----
+nnoremap <leader>g :action Git.Menu<CR>
+
+let g:NERDTreeMapActivateNode='l'
+let g:NERDTreeMapJumpParent='h'
