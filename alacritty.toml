@@ -1,0 +1,17 @@
+[terminal]
+
+  [terminal.shell]
+  program = "/opt/homebrew/bin/tmux"
+  args = ["attach"]
+
+[window]
+decorations = "Buttonless"
+opacity = 0.98
+# blur = true
+# padding = { x = 2, y = 2}
+dynamic_padding = true
+
+[font]
+normal = {family = "JetBrainsMono Nerd Font", style = "Regular"}
+size = 12
+
