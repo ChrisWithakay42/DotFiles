@@ -31,6 +31,21 @@
                         ]
                     },
                     {
+                        "description": "Remap C - / to Backspace",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "slash",
+                                    "modifiers": {
+                                        "mandatory": ["left_control"]
+                                    }
+                                },
+                                "to": [{ "key_code": "delete_or_backspace" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Remap Tab to Hyper key when held, Tab when tapped",
                         "manipulators": [
                             {
