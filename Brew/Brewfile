@@ -81,6 +81,7 @@ cask "raycast"
 cask "discord"
 cask "postman"
 cask "karabiner-elements"
+cask "rectangle"
 cask "keepassxc"
 
 # Fonts
