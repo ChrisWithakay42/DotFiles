@@ -10,7 +10,8 @@ read -rp "Enter Query: " query
 
 if grep -q "$selected" ~/DotFiles/scripts/.tmux-cht-languages; then
     query=$(echo "$query" | tr ' ' '+')
-    tmux neww "curl cht.sh/$selected/$query && while true; do sleep 1; done"
-else
-    tmux neww "curl -s cht.sh/$selected~$query | less"
+    # tmux neww "curl cht.sh/$selected/$query && while true; do sleep 1; done"
+    tmux neww "curl -s cht.sh/$selected/$query | less -R"
+# else
+    # tmux neww "curl -s cht.sh/$selected~$query | less"
 fi
