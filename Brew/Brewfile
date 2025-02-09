@@ -90,3 +90,28 @@ cask "keepassxc"
 # Fonts
 cask "font-hack-nerd-font"
 cask "font-jetbrains-mono-nerd-font"
+
+# Offensive/Penetration Testing Tools
+brew "aircrack-ng"               # Wi-Fi cracking tool
+brew "metasploit"                # Exploitation framework
+brew "burp-suite"                # Web vulnerability scanner
+brew "nikto"                     # Web server scanner
+brew "sqlmap"                    # Automated SQL injection tool
+brew "dnsrecon"                  # DNS reconnaissance tool
+brew "theharvester"              # E-mail and domain info gathering tool
+brew "hydra"                     # Brute force password cracking tool
+brew "crackmapexec"              # SMB enumeration and exploitation tool
+brew "impacket"                  # Collection of Python tools for network penetration testing
+brew "enum4linux"                # Linux SMB enumeration tool
+brew "ncat"                      # Netcat, network exploration tool
+brew "ettercap"                  # Network sniffing and man-in-the-middle attacks
+brew "mitmproxy"                 # Intercepting proxy for HTTP/HTTPS
+brew "gowitness"                 # Screenshot tool for phishing sites
+brew "beef-xss"                  # Browser exploitation framework
+brew "wpscan"                    # WordPress vulnerability scanner
+brew "zap-cli"                   # Automated security scanner for ZAP
+brew "sublist3r"                 # Subdomain discovery tool
+brew "shodan-cli"                # Command-line interface for Shodan
+brew "amass"                     # OSINT and subdomain enumeration
+brew "wifite"                    # Automated Wi-Fi hacking tool
+brew "mimikatz"                  # Windows post-exploitation tool
