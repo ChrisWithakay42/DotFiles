@@ -3,6 +3,8 @@ tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/core"
 tap "jesseduffield/lazygit"
+tap "keith/formulae/reminders-cli"
+tap "yakitrak/yakitrak"
 
 # CLI Utilities
 brew "wget"
@@ -67,7 +69,8 @@ brew "docker-compose"
 brew "gitlab-runner"
 
 # Productivity & Misc
-brew "reminders-cli"
+brew "yakitrak/yakitrak/obsidian-cli"
+brew "keith/formulae/reminders-cli"
 brew "spotifyd"
 brew "spotify_player"
 brew "nchat"
