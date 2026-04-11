@@ -122,12 +122,12 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Open Arc",
+                                "description": "Open Browser",
                                 "from": {
                                     "key_code": "j",
                                     "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "shell_command": "open -a 'Arc.app'" }],
+                                "to": [{ "shell_command": "open -a 'Safari'" }],
                                 "type": "basic"
                             },
                             {
@@ -138,7 +138,7 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Open Alacritty",
+                                "description": "Open Terminal",
                                 "from": {
                                     "key_code": "k",
                                     "modifiers": { "optional": ["any"] }
@@ -239,7 +239,7 @@
                                     "key_code": "n",
                                     "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "shell_command": "open -a 'Notes'" }],
+                                "to": [{ "shell_command": "open -a Notes" }],
                                 "type": "basic"
                             },
                             {
