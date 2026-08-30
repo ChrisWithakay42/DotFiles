@@ -1,0 +1,63 @@
+# =============================================================================
+# Oh My Posh Theme Initialization
+# =============================================================================
+oh-my-posh init pwsh --config "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/gruvbox.omp.json" | Invoke-Expression
+
+# =============================================================================
+# psmux Integration & Auto-Start Configuration
+# =============================================================================
+# Automatically attach or launch a psmux session if outside a multiplexer frame
+if (-not $env:PSMUX_SESSION -and $host.Name -eq 'ConsoleHost') {
+    # Auto-attach to default session or spin up a new one
+    psmux attach -t default 2>$null
+    if ($LASTEXITCODE -ne 0) {
+        psmux new-session -s default
+    }
+}
+
+# psmux Shortcuts
+function mx { psmux $args }
+function mxa { psmux attach -t $args[0] }
+function mxl { psmux list-sessions }
+function mxk { psmux kill-session -t $args[0] }
+
+# =============================================================================
+# Oh-My-Zsh Style Navigation & Quality-of-Life Aliases
+# =============================================================================
+# Navigation
+Set-Alias -Name .. -Value cd.. -Option AllScope
+function ... { Set-Location ..\.. }
+function .... { Set-Location ..\..\.. }
+
+# Enhanced Directory Listing
+function l { Get-ChildItem -Path $args }
+function ll { Get-ChildItem -Path $args -Force }
+function la { Get-ChildItem -Path $args -Hidden }
+
+# Utility Wrappers
+function touch ($file) {
+    New-Item -ItemType File -Name $file -Force | Out-Null
+}
+
+function grep ($pattern, $path) {
+    if ($path) { Select-String -Pattern $pattern -Path $path }
+    else { $input | Select-String -Pattern $pattern }
+}
+
+# Quick reload profile
+function reload {
+    & $PROFILE
+    Write-Host "PowerShell profile reloaded." -ForegroundColor Green
+}
+
+# Defaults
+$env:EDITOR = 'nvim'
+
+function edit-profile {
+    & $env:EDITOR $PROFILE
+}
+
+function refreshenv {
+    $env:PATH = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
+    Write-Host "Environment PATH successfully reloaded." -ForegroundColor Green
+}
