@@ -207,7 +207,7 @@
                                     "key_code": "u",
                                     "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "shell_command": "open -a 'Mail.app'" }],
+                                "to": [{ "shell_command": "open -a 'Mimestream.app'" }],
                                 "type": "basic"
                             },
                             {
@@ -274,7 +274,6 @@
                                 "to": [{ "shell_command": "open -a 'Windows App'" }],
                                 "type": "basic"
                             },
-
                             {
                                 "conditions": [
                                     {
@@ -342,7 +341,7 @@
                         ]
                     },
                     {
-                        "description": "Hyper Key sublayer w",
+                        "description": "Hyper Key sublayer w (AeroSpace Controls)",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -381,306 +380,192 @@
                                 "type": "basic"
                             },
                             {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_w",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Window: left-half",
-                                "from": {
-                                    "key_code": "h",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [{ "shell_command": "open -g rectangle://execute-action?name=left-half" }],
+                                "conditions": [{ "name": "hyper_sublayer_w", "type": "variable_if", "value": 1 }],
+                                "description": "AeroSpace: Throw Window to Other Monitor (Toggle)",
+                                "from": { "key_code": "m", "modifiers": { "optional": ["any"] } },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-monitor --focus-follows-window --wrap-around next" }],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_w",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Window: right-half",
-                                "from": {
-                                    "key_code": "l",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [{ "shell_command": "open -g rectangle://execute-action?name=right-half" }],
+                                "conditions": [{ "name": "hyper_sublayer_w", "type": "variable_if", "value": 1 }],
+                                "description": "AeroSpace: Move Window to Left Screen",
+                                "from": { "key_code": "u", "modifiers": { "mandatory": ["shift"] } },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-monitor --focus-follows-window left" }],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_w",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Window: center-half",
-                                "from": {
-                                    "key_code": "j",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [{ "shell_command": "open -g rectangle://execute-action?name=center-half" }],
+                                "conditions": [{ "name": "hyper_sublayer_w", "type": "variable_if", "value": 1 }],
+                                "description": "AeroSpace: Move Window to Right Screen",
+                                "from": { "key_code": "i", "modifiers": { "mandatory": ["shift"] } },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-monitor --focus-follows-window right" }],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_w",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Window: maximize",
-                                "from": {
-                                    "key_code": "return_or_enter",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [{ "shell_command": "open -g rectangle://execute-action?name=maximize" }],
+                                "conditions": [{ "name": "hyper_sublayer_w", "type": "variable_if", "value": 1 }],
+                                "description": "AeroSpace: Move Window Left",
+                                "from": { "key_code": "h", "modifiers": { "mandatory": ["shift"] } },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move left" }],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_w",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Window: almost maximize",
-                                "from": {
-                                    "key_code": "spacebar",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [{ "shell_command": "open -g rectangle://execute-action?name=almost-maximize" }],
+                                "conditions": [{ "name": "hyper_sublayer_w", "type": "variable_if", "value": 1 }],
+                                "description": "AeroSpace: Move Window Down",
+                                "from": { "key_code": "j", "modifiers": { "mandatory": ["shift"] } },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move down" }],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_w",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Window: first three fourths",
-                                "from": {
-                                    "key_code": "n",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [{ "shell_command": "open -g rectangle://execute-action?name=first-three-fourths" }],
+                                "conditions": [{ "name": "hyper_sublayer_w", "type": "variable_if", "value": 1 }],
+                                "description": "AeroSpace: Move Window Up",
+                                "from": { "key_code": "k", "modifiers": { "mandatory": ["shift"] } },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move up" }],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_w",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Window: last three fourths",
-                                "from": {
-                                    "key_code": "period",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [{ "shell_command": "open -g rectangle://execute-action?name=last-three-fourths" }],
+                                "conditions": [{ "name": "hyper_sublayer_w", "type": "variable_if", "value": 1 }],
+                                "description": "AeroSpace: Move Window Right",
+                                "from": { "key_code": "l", "modifiers": { "mandatory": ["shift"] } },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move right" }],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_w",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Window: first three thirds",
-                                "from": {
-                                    "key_code": "m",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [{ "shell_command": "open -g rectangle://execute-action?name=first-two-thirds" }],
+                                "conditions": [{ "name": "hyper_sublayer_w", "type": "variable_if", "value": 1 }],
+                                "description": "AeroSpace: Focus Left",
+                                "from": { "key_code": "h", "modifiers": { "optional": ["any"] } },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace focus left" }],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_w",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Window: last three thirds",
-                                "from": {
-                                    "key_code": "comma",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [{ "shell_command": "open -g rectangle://execute-action?name=last-two-thirds" }],
+                                "conditions": [{ "name": "hyper_sublayer_w", "type": "variable_if", "value": 1 }],
+                                "description": "AeroSpace: Focus Down",
+                                "from": { "key_code": "j", "modifiers": { "optional": ["any"] } },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace focus down" }],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_w",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Window: first third",
-                                "from": {
-                                    "key_code": "y",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [{ "shell_command": "open -g rectangle://execute-action?name=first-third" }],
+                                "conditions": [{ "name": "hyper_sublayer_w", "type": "variable_if", "value": 1 }],
+                                "description": "AeroSpace: Focus Up",
+                                "from": { "key_code": "k", "modifiers": { "optional": ["any"] } },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace focus up" }],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_w",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Window: last third",
-                                "from": {
-                                    "key_code": "o",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [{ "shell_command": "open -g rectangle://execute-action?name=last-third" }],
+                                "conditions": [{ "name": "hyper_sublayer_w", "type": "variable_if", "value": 1 }],
+                                "description": "AeroSpace: Focus Right",
+                                "from": { "key_code": "l", "modifiers": { "optional": ["any"] } },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace focus right" }],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_w",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Window: first fourth",
-                                "from": {
-                                    "key_code": "u",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [{ "shell_command": "open -g rectangle://execute-action?name=first-fourth" }],
+                                "conditions": [{ "name": "hyper_sublayer_w", "type": "variable_if", "value": 1 }],
+                                "description": "AeroSpace: Toggle Fullscreen",
+                                "from": { "key_code": "return_or_enter", "modifiers": { "optional": ["any"] } },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace fullscreen" }],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_w",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Window: last fourth",
-                                "from": {
-                                    "key_code": "i",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [{ "shell_command": "open -g rectangle://execute-action?name=last-fourth" }],
+                                "conditions": [{ "name": "hyper_sublayer_w", "type": "variable_if", "value": 1 }],
+                                "description": "AeroSpace: Toggle Floating Window",
+                                "from": { "key_code": "spacebar", "modifiers": { "optional": ["any"] } },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace layout floating tiling" }],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_w",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Window: make larger",
-                                "from": {
-                                    "key_code": "equal_sign",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [{ "shell_command": "open -g rectangle://execute-action?name=larger" }],
+                                "conditions": [{ "name": "hyper_sublayer_w", "type": "variable_if", "value": 1 }],
+                                "description": "AeroSpace: Join Left",
+                                "from": { "key_code": "n", "modifiers": { "optional": ["any"] } },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace join-with left" }],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_w",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Window: make smaller",
-                                "from": {
-                                    "key_code": "hyphen",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [{ "shell_command": "open -g rectangle://execute-action?name=smaller" }],
+                                "conditions": [{ "name": "hyper_sublayer_w", "type": "variable_if", "value": 1 }],
+                                "description": "AeroSpace: Join Up",
+                                "from": { "key_code": "comma", "modifiers": { "optional": ["any"] } },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace join-with up" }],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_w",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Window: Rectangle custom size",
-                                "from": {
-                                    "key_code": "k",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "n",
-                                        "modifiers": ["left_command", "left_option", "left_control", "left_shift"]
-                                    }
-                                ],
+                                "conditions": [{ "name": "hyper_sublayer_w", "type": "variable_if", "value": 1 }],
+                                "description": "AeroSpace: Join Right",
+                                "from": { "key_code": "period", "modifiers": { "optional": ["any"] } },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace join-with right" }],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_w",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Window: next window",
-                                "from": {
-                                    "key_code": "p",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "grave_accent_and_tilde",
-                                        "modifiers": ["right_command"]
-                                    }
-                                ],
+                                "conditions": [{ "name": "hyper_sublayer_w", "type": "variable_if", "value": 1 }],
+                                "description": "AeroSpace: Toggle Horizontal/Vertical Orientation",
+                                "from": { "key_code": "y", "modifiers": { "optional": ["any"] } },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace layout tiles horizontal vertical" }],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_w",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Window: next window",
-                                "from": {
-                                    "key_code": "p",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "non_us_backslash",
-                                        "modifiers": ["right_command"]
-                                    }
-                                ],
+                                "conditions": [{ "name": "hyper_sublayer_w", "type": "variable_if", "value": 1 }],
+                                "description": "AeroSpace: Toggle Accordion Layout",
+                                "from": { "key_code": "o", "modifiers": { "optional": ["any"] } },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace layout tiles accordion" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [{ "name": "hyper_sublayer_w", "type": "variable_if", "value": 1 }],
+                                "description": "AeroSpace: Move Window to Workspace 1",
+                                "from": { "key_code": "1", "modifiers": { "optional": ["any"] } },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace 1" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [{ "name": "hyper_sublayer_w", "type": "variable_if", "value": 1 }],
+                                "description": "AeroSpace: Move Window to Workspace 2",
+                                "from": { "key_code": "2", "modifiers": { "optional": ["any"] } },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace 2" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [{ "name": "hyper_sublayer_w", "type": "variable_if", "value": 1 }],
+                                "description": "AeroSpace: Move Window to Workspace 3",
+                                "from": { "key_code": "3", "modifiers": { "optional": ["any"] } },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace 3" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [{ "name": "hyper_sublayer_w", "type": "variable_if", "value": 1 }],
+                                "description": "AeroSpace: Move Window to Workspace 4",
+                                "from": { "key_code": "4", "modifiers": { "optional": ["any"] } },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace 4" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [{ "name": "hyper_sublayer_w", "type": "variable_if", "value": 1 }],
+                                "description": "AeroSpace: Move Window to Workspace 5",
+                                "from": { "key_code": "5", "modifiers": { "optional": ["any"] } },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace 5" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [{ "name": "hyper_sublayer_w", "type": "variable_if", "value": 1 }],
+                                "description": "AeroSpace: Move Window to Workspace 6",
+                                "from": { "key_code": "6", "modifiers": { "optional": ["any"] } },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace 6" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [{ "name": "hyper_sublayer_w", "type": "variable_if", "value": 1 }],
+                                "description": "AeroSpace: Move Window to Workspace 7",
+                                "from": { "key_code": "7", "modifiers": { "optional": ["any"] } },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace 7" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [{ "name": "hyper_sublayer_w", "type": "variable_if", "value": 1 }],
+                                "description": "AeroSpace: Move Window to Workspace 8",
+                                "from": { "key_code": "8", "modifiers": { "optional": ["any"] } },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace 8" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [{ "name": "hyper_sublayer_w", "type": "variable_if", "value": 1 }],
+                                "description": "AeroSpace: Move Window to Workspace 9",
+                                "from": { "key_code": "9", "modifiers": { "optional": ["any"] } },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace 9" }],
                                 "type": "basic"
                             }
                         ]
@@ -688,6 +573,105 @@
                     {
                         "description": "Hyper Key base layer (Tab held down alone)",
                         "manipulators": [
+                            {
+                                "conditions": [
+                                    { "name": "hyper", "type": "variable_if", "value": 1 },
+                                    { "name": "hyper_sublayer_w", "type": "variable_if", "value": 0 },
+                                    { "name": "hyper_sublayer_spacebar", "type": "variable_if", "value": 0 }
+                                ],
+                                "description": "AeroSpace Workspace 1",
+                                "from": { "key_code": "1", "modifiers": { "optional": ["any"] } },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace workspace 1" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    { "name": "hyper", "type": "variable_if", "value": 1 },
+                                    { "name": "hyper_sublayer_w", "type": "variable_if", "value": 0 },
+                                    { "name": "hyper_sublayer_spacebar", "type": "variable_if", "value": 0 }
+                                ],
+                                "description": "AeroSpace Workspace 2",
+                                "from": { "key_code": "2", "modifiers": { "optional": ["any"] } },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace workspace 2" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    { "name": "hyper", "type": "variable_if", "value": 1 },
+                                    { "name": "hyper_sublayer_w", "type": "variable_if", "value": 0 },
+                                    { "name": "hyper_sublayer_spacebar", "type": "variable_if", "value": 0 }
+                                ],
+                                "description": "AeroSpace Workspace 3",
+                                "from": { "key_code": "3", "modifiers": { "optional": ["any"] } },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace workspace 3" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    { "name": "hyper", "type": "variable_if", "value": 1 },
+                                    { "name": "hyper_sublayer_w", "type": "variable_if", "value": 0 },
+                                    { "name": "hyper_sublayer_spacebar", "type": "variable_if", "value": 0 }
+                                ],
+                                "description": "AeroSpace Workspace 4",
+                                "from": { "key_code": "4", "modifiers": { "optional": ["any"] } },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace workspace 4" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    { "name": "hyper", "type": "variable_if", "value": 1 },
+                                    { "name": "hyper_sublayer_w", "type": "variable_if", "value": 0 },
+                                    { "name": "hyper_sublayer_spacebar", "type": "variable_if", "value": 0 }
+                                ],
+                                "description": "AeroSpace Workspace 5",
+                                "from": { "key_code": "5", "modifiers": { "optional": ["any"] } },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace workspace 5" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    { "name": "hyper", "type": "variable_if", "value": 1 },
+                                    { "name": "hyper_sublayer_w", "type": "variable_if", "value": 0 },
+                                    { "name": "hyper_sublayer_spacebar", "type": "variable_if", "value": 0 }
+                                ],
+                                "description": "AeroSpace Workspace 6",
+                                "from": { "key_code": "6", "modifiers": { "optional": ["any"] } },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace workspace 6" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    { "name": "hyper", "type": "variable_if", "value": 1 },
+                                    { "name": "hyper_sublayer_w", "type": "variable_if", "value": 0 },
+                                    { "name": "hyper_sublayer_spacebar", "type": "variable_if", "value": 0 }
+                                ],
+                                "description": "AeroSpace Workspace 7",
+                                "from": { "key_code": "7", "modifiers": { "optional": ["any"] } },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace workspace 7" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    { "name": "hyper", "type": "variable_if", "value": 1 },
+                                    { "name": "hyper_sublayer_w", "type": "variable_if", "value": 0 },
+                                    { "name": "hyper_sublayer_spacebar", "type": "variable_if", "value": 0 }
+                                ],
+                                "description": "AeroSpace Workspace 8",
+                                "from": { "key_code": "8", "modifiers": { "optional": ["any"] } },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace workspace 8" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    { "name": "hyper", "type": "variable_if", "value": 1 },
+                                    { "name": "hyper_sublayer_w", "type": "variable_if", "value": 0 },
+                                    { "name": "hyper_sublayer_spacebar", "type": "variable_if", "value": 0 }
+                                ],
+                                "description": "AeroSpace Workspace 9",
+                                "from": { "key_code": "9", "modifiers": { "optional": ["any"] } },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace workspace 9" }],
+                                "type": "basic"
+                            },
                             {
                                 "conditions": [
                                     {
@@ -715,101 +699,83 @@
                                 "type": "basic"
                             },
                             {
-                "conditions": [
-                  {
-                    "name": "hyper",
-                    "type": "variable_if",
-                    "value": 1
-                  },
-                  {
-                    "name": "hyper_sublayer_w",
-                    "type": "variable_if",
-                    "value": 0
-                  },
-                  {
-                    "name": "hyper_sublayer_e",
-                    "type": "variable_if",
-                    "value": 0
-                  }
-                ],
-                "description": "Down arrow",
-                "from": {
-                  "key_code": "j",
-                  "modifiers": {
-                    "optional": ["any"]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "down_arrow"
-                  }
-                ],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper",
-                    "type": "variable_if",
-                    "value": 1
-                  },
-                  {
-                    "name": "hyper_sublayer_w",
-                    "type": "variable_if",
-                    "value": 0
-                  },
-                  {
-                    "name": "hyper_sublayer_e",
-                    "type": "variable_if",
-                    "value": 0
-                  }
-                ],
-                "description": "Right arrow",
-                "from": {
-                  "key_code": "l",
-                  "modifiers": {
-                    "optional": ["any"]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "right_arrow"
-                  }
-                ],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper",
-                    "type": "variable_if",
-                    "value": 1
-                  },
-                  {
-                    "name": "hyper_sublayer_w",
-                    "type": "variable_if",
-                    "value": 0
-                  },
-                  {
-                    "name": "hyper_sublayer_e",
-                    "type": "variable_if",
-                    "value": 0
-                  }
-                ],
-                "description": "Left arrow",
-                "from": {
-                  "key_code": "h",
-                  "modifiers": {
-                    "optional": ["any"]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "left_arrow"
-                  }
-                ],
-                "type": "basic"
-              },
+                                "conditions": [
+                                    {
+                                        "name": "hyper",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_w",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_e",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    }
+                                ],
+                                "description": "Down arrow",
+                                "from": {
+                                    "key_code": "j",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "down_arrow" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_w",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_e",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    }
+                                ],
+                                "description": "Right arrow",
+                                "from": {
+                                    "key_code": "l",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "right_arrow" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_w",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_e",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    }
+                                ],
+                                "description": "Left arrow",
+                                "from": {
+                                    "key_code": "h",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "left_arrow" }],
+                                "type": "basic"
+                            },
                             {
                                 "conditions": [
                                     {
