@@ -36,3 +36,31 @@ path=(
   /usr/sbin
   $path
 )
+
+# ---------------------------------------------------------------------------
+# XDG base directories, and the tools that can be told to honour them.
+# Each var below moves a file that would otherwise be dropped in $HOME.
+# Unset any one of these and the tool reverts to its old ~/ location.
+# ---------------------------------------------------------------------------
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_STATE_HOME="$HOME/.local/state"
+export XDG_CACHE_HOME="$HOME/.cache"
+
+# History and state
+export LESSHISTFILE="$XDG_STATE_HOME/less/history"
+export PYTHON_HISTORY="$XDG_STATE_HOME/python/history"   # CPython 3.13+
+export PSQL_HISTORY="$XDG_STATE_HOME/psql/history"
+export SQLITE_HISTORY="$XDG_STATE_HOME/sqlite/history"
+export REDISCLI_HISTFILE="$XDG_STATE_HOME/redis/history"
+export _Z_DATA="$XDG_STATE_HOME/z/data"                  # oh-my-zsh z plugin
+export XAUTHORITY="$XDG_STATE_HOME/X11/xauthority"
+
+# Config
+export TASKRC="$XDG_CONFIG_HOME/task/taskrc"
+export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"
+export BOTO_CONFIG="$XDG_CONFIG_HOME/boto/config"
+
+# Tool homes
+export GRADLE_USER_HOME="$XDG_DATA_HOME/gradle"
+export IPYTHONDIR="$XDG_DATA_HOME/ipython"

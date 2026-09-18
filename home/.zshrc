@@ -35,7 +35,7 @@ if [[ -f "$ZSH/custom/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh" ]]; then
 fi
 
 # Source Powerlevel10k theme config
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+[[ ! -f ${XDG_CONFIG_HOME:-$HOME/.config}/zsh/p10k.zsh ]] || source ${XDG_CONFIG_HOME:-$HOME/.config}/zsh/p10k.zsh
 
 # --- 4. Lazy-Loaded Tools ---
 
@@ -152,7 +152,7 @@ alias dce="docker-compose exec"
 alias ds="docker system prune -af --volumes"
 alias sshconfig="nvim ~/.ssh/config"
 alias zshconfig="nvim ~/.zshrc"
-alias gitconfig="nvim ~/.gitconfig"
+alias gitconfig="nvim ${XDG_CONFIG_HOME:-$HOME/.config}/git/config"
 alias nvimconfig="nvim ~/.config/nvim/init.lua"
 alias tmuxconfig="nvim ~/.tmux.conf"
 alias ghosttyconfig="nvim ~/.config/ghostty/config"
