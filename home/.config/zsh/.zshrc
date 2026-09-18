@@ -21,6 +21,12 @@ plugins=(
 )
 
 # Source Oh My Zsh framework
+# /etc/zshrc sets HISTFILE, and /etc/zshrc_Apple_Terminal sets
+# SHELL_SESSION_DIR, both unconditionally and both AFTER ~/.zshenv.
+# They therefore have to be set here, before oh-my-zsh loads its history lib.
+export HISTFILE="${XDG_STATE_HOME:-$HOME/.local/state}/zsh/history"
+export SHELL_SESSION_DIR="${XDG_STATE_HOME:-$HOME/.local/state}/zsh/sessions"
+
 source $ZSH/oh-my-zsh.sh
 
 # --- 3. Highlighting & Autosuggestions ---
