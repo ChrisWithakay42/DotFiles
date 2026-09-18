@@ -155,7 +155,7 @@ alias zshconfig="nvim ~/.zshrc"
 alias gitconfig="nvim ~/.gitconfig"
 alias nvimconfig="nvim ~/.config/nvim/init.lua"
 alias tmuxconfig="nvim ~/.tmux.conf"
-alias alacrittyconfig="nvim ~/.config/alacritty/alacritty.toml"
+alias ghosttyconfig="nvim ~/.config/ghostty/config"
 alias p10kconfig="p10k configure"
 alias ohmyzsh="cd ~/.oh-my-zsh"
 alias gadm="$HOME/Tools/gam7/gam"
@@ -235,6 +235,4 @@ command_not_found_handler() {
 }
 
 
-# Added by Antigravity CLI installer
-export PATH="/Users/kris/.local/bin:$PATH"
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --enable-features=OverlayScrollbar,SmoothScrolling --disable-gql --ignore-gpu-blocklist"
